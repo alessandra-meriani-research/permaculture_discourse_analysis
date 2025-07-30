@@ -98,9 +98,7 @@ Department of Statistical Sciences - Department of Agricultural and Food Science
 > Meriani, A. (2025). *Permaculture Discourse Analysis: Text Mining of Sustainability Narratives*. GitHub. https://github.com/alessandra_meriani/permaculture-discourse-analysis
 
 ---
-
-
-                                               *Made with R & radical hope 💚*
+  *Made with R & radical hope 💚*
 
 
 
