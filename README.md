@@ -100,7 +100,7 @@ Department of Statistical Sciences - Department of Agricultural and Food Science
 ---
 
 
-## *🧬 Made with R & radical hope 💚*
+                                               *Made with R & radical hope 💚*
 
 
 
