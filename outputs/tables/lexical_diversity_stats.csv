@@ -1,0 +1,6 @@
+"Index","Value","Comment"
+"TTR",0.0394,"Low TTR is expected in large corpora; confirms lexical richness."
+"Guiraud",26.66,"Guiraud corrects for size; value indicates a diverse vocabulary."
+"CTTR",18.85,"CTTR stabilizes TTR across tokens; confirms robustness."
+"Herdan",0.752,"Herdan's C > 0.7 indicates consistent vocabulary growth."
+"Maas",0.172,"Low Maas values reflect high lexical diversity."

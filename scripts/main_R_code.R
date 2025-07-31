@@ -58,7 +58,7 @@ load("/Users/studiomeriani/Desktop/tesi_r/sensitive.RData") #sentiment analysis
 #read the html page + vector for text information
 vText1 <- c()
 for(k in 1:10){
-  link1 <- paste("https://www.permaculture.co.uk/articles/category/articles/page/",k,"/",sep="")
+  link1 <- paste("https://www.permaculture.co.uk/articles/category/articles/",k,"/",sep="")
   blog1 <- read_html(link1)
   link_fulltext1<- blog1 %>% html_nodes(".IndexGrid a ") %>% html_attr("href") %>% unique()
   link_fulltext_cleaned1 <- grep("https", link_fulltext1, value = TRUE) # Extract elements with https only
@@ -589,6 +589,7 @@ corpus_df$text_clean<- cleanText(xtxt = corpus_df$text,
     
 
 
+    
 ########## (4) TEXT ANALYSIS #####   
  #### (4.1) WORD-LEVEL ####
     

@@ -1,0 +1,6 @@
+token,lemma,upos,stopword
+permaculture,permaculture,NOUN,False
+is,be,AUX,True
+a,a,DET,True
+design,design,NOUN,False
+system,system,NOUN,False
