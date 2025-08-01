@@ -56,6 +56,8 @@ ud_model <- udpipe_load_model(file = "./functions/english-ewt-ud-2.5-191206.udpi
 
 # Annotate - 463130 obs
 #corpus_tag <- udpipe(x = corpus_df$text_utf, object = ud_model, doc_id = 1:nrow(corpus_df))
+#saveRDS(corpus_tag, "data/corpus_tag.rds")
+corpus_tag <- readRDS("data/corpus_tag.rds")
 corpus_tag <- corpus_tag %>% select(doc_id, token, lemma, upos)
 
 # Identify stopwords
@@ -82,6 +84,7 @@ corpus_bow <- Corpus(VectorSource(corpus_tag_filtered$text))
 
 # Generate Term-Document Matrix
 tdm <- TermDocumentMatrix(corpus_bow, control = list(wordLengths = c(3, Inf)))
+saveRDS(tdm, "data/tdm.rds")
 
 # Filter sparse terms (retain those present in >=5% of docs)
 tdm_sparse <- removeSparseTerms(tdm, sparse = 0.95)
@@ -91,3 +94,6 @@ tdm_matrix <- as.matrix(tdm_sparse)
 write.csv(tdm_matrix, file = "data/tdm_matrix.csv", row.names = TRUE)
 
 saveRDS(tdm_matrix, file = "data/tdm_matrix.rds")
+
+
+
